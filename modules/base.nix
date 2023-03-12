@@ -511,6 +511,9 @@ in
         name = "robotnix-build";
         targetPkgs = pkgs: config.envPackages;
         multiPkgs = pkgs: with pkgs; [ zlib ];
+        profile = ''
+          export ALLOW_NINJA_ENV=true
+        '';
       };
     };
   }];
