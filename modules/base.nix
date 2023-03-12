@@ -513,6 +513,8 @@ in
         multiPkgs = pkgs: with pkgs; [ zlib ];
         profile = ''
           export ALLOW_NINJA_ENV=true
+          export QT_QPA_PLATFORM=xcb
+          export QT_XCB_GL_INTEGRATION=none
         '';
       };
     };

@@ -31,6 +31,23 @@ in mkIf (config.flavor == "vanilla") (mkMerge [
 }
 {
   ### AOSP usability improvements ###
+  envPackages = with pkgs; [
+    #TODO: check which packages are actually needed
+    openssl.dev
+    xorg.libX11
+    libpulseaudio
+    libGl 
+    expat
+    qt5.full
+    libsForQt5.qt5.qtwayland
+    xorg.libxcb.dev
+    xorg.libxcb
+    libuuid
+    vulkan-loader
+    libxml2
+    gcc.cc
+    glibc.dev
+  ];
 
   # This is the prebuilt webview apk from AOSP. It is very old and not enabled by default.
   # Enable using webview.prebuilt.enable = true;
