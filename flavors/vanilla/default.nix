@@ -36,7 +36,7 @@ in mkIf (config.flavor == "vanilla") (mkMerge [
     openssl.dev
     xorg.libX11
     libpulseaudio
-    libGl 
+    libGL 
     expat
     qt5.full
     libsForQt5.qt5.qtwayland
