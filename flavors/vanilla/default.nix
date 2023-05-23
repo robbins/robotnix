@@ -47,6 +47,7 @@ in mkIf (config.flavor == "vanilla") (mkMerge [
     libxml2
     gcc.cc
     glibc.dev
+    gitRepo
   ];
 
   # This is the prebuilt webview apk from AOSP. It is very old and not enabled by default.
